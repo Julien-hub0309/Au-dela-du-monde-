@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Renégats - Projet Au-delà du Monde</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Module/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+                <img src="../Image/Logo.png" alt="Logo du Projet Au-delà du Monde" class="logo">
+            <h1>Au-delà du Monde</h1>
+            <p class="site-slogan">Explorez les mystères d'un univers inconnu</p>
+        </div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Ouvrir le menu de navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+             <ul class="nav-list">
+                <li><a href="../Histoire.html" class="nav-link">Histoire</a></li>
+                <li><a href="../Monde.html" class="nav-link">Le Monde</a></li>
+                <li><a href="../Personnage.html" class="nav-link current-page">Personnages</a></li>
+                <li><a href="../Artefact.html" class="nav-link">Artefacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="page-intro">
+            <h2>Les Renégats : Rejetés et Rebelles</h2>
+            <p>Des inconnu, oublié, entrainer a survivre pour un but bien précis, mais laquelle ? </p>
+        </section>
+
+        <section class="content-section item-detail">
+            <div class="content-block">
+                <img src="../Image/Personnage/Ren%C3%A9gat.png" alt="Image d'un Renégat" class="content-image right">
+                <h3>Motivations et Factions</h3>
+                <p>Les Renégats sont des personnages qui, pour diverses raisons, ont rompu avec les normes sociales, les lois ou les factions dominantes. Leurs motivations sont variées : quête de liberté, vengeance, survie, ou conviction que le système actuel est corrompu. Ils opèrent souvent en marge de la société, agissant en solitaires, formant de petit groupe temporaire.</p>
+                <p>Bien que certains soient perçus comme des criminels, d'autres peuvent être des figures de la résistance, luttant contre l'oppression. Leurs compétences sont souvent adaptées à la survie et au combat non conventionnel, et ils peuvent posséder des connaissances uniques sur les recoins sombres du monde.</p>
+                <h4>Exemples de Renégats :</h4>
+                <ul>
+                    <li><strong>Exilés Politiques :</strong> Ceux qui ont été bannis pour leurs idées ou leurs actions contre le pouvoir en place.</li>
+                    <li><strong>Mercenaires Indépendants :</strong> Guerriers ou agents qui ne jurent allégeance à aucune faction, travaillant pour le plus offrant.</li>
+                    <li><strong>Survivants des Fractures :</strong> Ceux qui ont été transformés ou traumatisés par les Fractures, et qui luttent pour leur survie.</li>
+                </ul>
+                <p>Les Renégats ajoutent une couche de complexité morale à l'univers, forçant les héros à remettre en question leurs propres convictions et à comprendre les nuances entre le bien et le mal.</p>
+            </div>
+            <div class="call-to-action-bottom">
+                <a href="../Personnage.html" class="button primary-button">Retour aux Personnages</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section about-us">
+                <h3>À Propos de Nous</h3>
+                <p>Ce projet est une exploration d'un univers riche et imaginatif, créé avec passion pour tous les amateurs de fantasy et de science-fiction.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="../Histoire.html">Histoire</a></li>
+                    <li><a href="../Monde.html">Le Monde</a></li>
+                    <li><a href="../Personnage.html">Personnages</a></li>
+                    <li><a href="../Artefact.html">Artefacts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h3>Contact</h3>
+                <p>Des questions ou suggestions? Contactez-nous à: <a href="mailto:contact@audeladumonde.com">contact@audeladumonde.com</a></p>
+                <div class="social-media">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <details class="glossaire">
+                <summary>Glossaire</summary>
+                <div class="glossaire-content">
+                    <dl>
+                        <dt>Paradoxe</dt>
+                        <dd>Humain vivant dasn un contexte impossible</dd>
+                        <dt>Éléméent 735</dt>
+                        <dd>Nouvelle forme d'énergie calcifier</dd>
+                        <dt>Fracture dimensionnelle</dt>
+                        <dd>Failles dans le tissu de la réalité menant à d'autres altération du monde.</dd>
+                        <dt>Réitération</dt>
+                        <dd>Réutilisation de parterne temporel, période historique, personne, évènement</dd>
+                        <dt>Solstheim</dt>
+                        <dd>Cités oublier foyer des paradoxe</dd>
+                        </dl>
+                </div>
+            </details>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Rechercher un mot-clé...">
+                <button onclick="searchKeyword()">Rechercher</button>
+            </div>
+            <p class="copyright">&copy; 2024 Projet Au-delà du Monde. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+     <script src="../Module/js/script.js"></script>
+</body>
+</html>

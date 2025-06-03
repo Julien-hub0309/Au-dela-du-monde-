@@ -1,0 +1,651 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #6614b8, #0080ff); /* Adjusted gradient direction */
+    color: #E0E0E0; /* Lighter text color for better contrast on dark background */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex;
+    flex-direction: column; /* For sticky footer */
+    transition: background 0.3s ease, color 0.3s ease;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(to right, #4a0f8b, #0056b3); /* Slightly darker gradient for header */
+    color: #FFFFFF; /* Pure white for header text */
+    text-align: center;
+    padding: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    position: relative;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.logo-link {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 175px; /* Adjust logo size */
+    height: auto;
+    border-radius: 50%; /* Make logo circular if desired */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Subtle glow */
+}
+
+.main-header h1 {
+    font-size: 2.8em; /* Larger, more impactful title */
+    margin: 10px 0 5px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.site-slogan {
+    font-size: 1.1em;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+.main-nav {
+    background: #0066cc; /* Semi-transparent background for nav */
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal navigation */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: block; /* Make the whole area clickable */
+}
+
+.nav-link:hover, .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #FFD700; /* Gold color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.nav-link.current-page {
+    background-color: #00bcd4; /* A distinct accent color for the current page */
+    color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1; /* Allows main content to grow and push footer down */
+    max-width: auto; /* Max width for content for better readability */
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08); /* Slightly transparent background for content sections */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.main-content h2, .main-content h3 {
+    color: #00bcd4; /* Accent color for headings */
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.intro-section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* Pill-shaped buttons */
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 10px;
+    text-align: center;
+}
+
+.primary-button {
+    background: linear-gradient(to right, #00bcd4, #00a0b8);
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
+
+.primary-button:hover, .primary-button:focus {
+    background: linear-gradient(to right, #00a0b8, #00849c);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6);
+}
+
+.secondary-button {
+    background: linear-gradient(to right, #6614b8, #501090);
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(102, 20, 184, 0.4);
+    border: 1px solid #7a25d1; /* Subtle border */
+}
+
+.secondary-button:hover, .secondary-button:focus {
+    background: linear-gradient(to right, #501090, #3a0b6b);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 20, 184, 0.6);
+}
+
+.small-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #E0E0E0;
+}
+
+.small-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: none; /* No lift for small buttons */
+    box-shadow: none;
+}
+
+/* Featured Content Cards */
+.featured-content {
+    margin-top: 40px;
+}
+
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05); /* Lighter background for cards */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+    width: auto;
+    height: auto; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, crop if necessary */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1; /* Allow card body to take available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom */
+}
+
+.card-body h4 {
+    color: #FFD700; /* Gold color for card titles */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.card-body p {
+    font-size: 0.95em;
+    color: #C0C0C0;
+    margin-bottom: 15px;
+}
+
+.card-body .button {
+    align-self: flex-start; /* Align button to the left */
+    margin-top: auto; /* Push button to the bottom */
+}
+
+/* Footer */
+.main-footer {
+    background: linear-gradient(to right, #4a0f8b, #0056b3); /* Same as header background */
+    color: #E0E0E0;
+    padding: 40px 20px 20px;
+    margin-top: 30px;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: #00bcd4; /* Accent color for footer headings */
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #E0E0E0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD700;
+}
+
+.social-media a {
+    color: #E0E0E0;
+    font-size: 1.8em;
+    margin-right: 15px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-media a:hover {
+    color: #00bcd4;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* Glossaire */
+details.glossaire {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius applies */
+}
+
+details.glossaire summary {
+    background: linear-gradient(to right, #6614b8, #0080ff);
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 8px; /* Apply to summary as well */
+    font-weight: bold;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+details.glossaire summary:hover {
+    background: linear-gradient(to right, #501090, #0066cc);
+}
+
+.glossaire-content {
+    background: rgba(255, 255, 255, 0.03); /* Lighter background for content */
+    padding: 20px;
+    margin-top: 0; /* Remove margin-top as it's handled by padding */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0 0 8px 8px; /* Only bottom corners */
+}
+
+.glossaire-content dt {
+    font-weight: bold;
+    color: #FFD700; /* Gold for definition terms */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+}
+
+.glossaire-content dd {
+    margin: 0 0 15px 20px;
+    color: #C0C0C0;
+}
+
+/* Search bar */
+.search-container {
+    margin: 20px auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput {
+    padding: 10px 15px;
+    border: 1px solid #7a25d1;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #E0E0E0;
+    font-size: 1em;
+    width: 70%;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#searchInput::placeholder {
+    color: #A0A0A0;
+}
+
+#searchInput:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #00bcd4, #00a0b8);
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.search-container button:hover {
+    background: linear-gradient(to right, #00a0b8, #00849c);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.4);
+}
+
+
+/* Highlighted text for search function */
+.highlight {
+    background-color: #FFD700; /* Gold background for highlights */
+    color: #333333; /* Darker text for contrast */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #A0A0A0;
+}
+
+/* Responsive Design - Media Queries */
+
+/* Tablets and small desktops */
+@media (max-width: 992px) {
+    .main-header h1 {
+        font-size: 2.2em;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
+        display: none; /* Hidden by default on small screens */
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        width: 80%; /* Make links wider */
+        text-align: center;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust footer grid */
+    }
+
+    .content-cards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.8em;
+    }
+
+    .site-slogan {
+        font-size: 1em;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .main-content {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .intro-section p {
+        font-size: 1em;
+    }
+
+    .call-to-action {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .button {
+        width: 80%; /* Make buttons full width */
+        margin: 8px auto;
+    }
+
+    .content-cards {
+        grid-template-columns: 1fr; /* Single column for cards */
+        padding: 10px;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-body h4 {
+        font-size: 1.1em;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack footer sections */
+        text-align: center;
+    }
+
+    .footer-section ul {
+        margin-bottom: 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchInput {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .search-container button {
+        width: 90%;
+        margin-left: 0;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .main-header {
+        height: auto;
+        padding-top: 80px; /* Make space for toggle button */
+    }
+
+    .menu-toggle {
+        top: 15px;
+        right: 15px;
+        font-size: 1.6em;
+    }
+
+    .main-header h1 {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .glossaire-content {
+        padding: 15px;
+    }
+}
+/* Conteneur pour l'image, pour gérer l'espacement et les dimensions */
+.image-container {
+    /* Utilise flexbox pour centrer l'image si elle est plus petite que le conteneur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Définit une largeur maximale pour le conteneur sur les grands écrans */
+    max-width: 800px; /* Ajustez cette valeur selon vos besoins */
+    width: 100%; /* Le conteneur prend toute la largeur disponible */
+
+    /* Définit une hauteur pour le conteneur, ou un ratio d'aspect */
+    /* Exemple: pour un ratio 16:9, utilisez padding-bottom: 56.25%; et position: relative; */
+    /* height: 400px; */ /* Ou une hauteur fixe, ajustez selon le design */
+    
+    margin: 20px auto; /* Centre le conteneur horizontalement et ajoute de l'espace */
+    overflow: hidden; /* Cache tout ce qui dépasse du conteneur */
+    border-radius: 8px; /* Bords arrondis pour une esthétique moderne */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre subtile pour la profondeur */
+}
+
+/* Styles pour l'image à l'intérieur du conteneur */
+.image-container img {
+    /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    max-width: 100%;
+    /* Maintient le ratio d'aspect de l'image */
+    height: auto;
+    /* Redimensionne l'image pour couvrir le conteneur sans déformation */
+    /* 'contain' pour s'assurer que l'image entière est visible, 'cover' pour remplir le conteneur */
+    object-fit: cover; 
+    /* Assure que l'image est un bloc pour éviter les problèmes d'espacement */
+    display: block;
+}
+
+/* Styles pour les images flottantes à côté du texte, comme sur vos pages précédentes */
+.content-image {
+    max-width: 100%; /* L'image ne dépasse pas la largeur de son parent */
+    height: auto; /* Maintient le ratio d'aspect */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Pour les images alignées à droite */
+.content-image.right {
+    float: right; /* Fait flotter l'image à droite */
+    margin-left: 20px; /* Ajoute un espace à gauche de l'image */
+    margin-bottom: 10px; /* Ajoute un espace en dessous de l'image */
+    max-width: 400px; /* Limite la largeur de l'image sur les grands écrans */
+}
+
+/* Pour les images alignées à gauche */
+.content-image.left {
+    float: left; /* Fait flotter l'image à gauche */
+    margin-right: 20px; /* Ajoute un espace à droite de l'image */
+    margin-bottom: 10px; /* Ajoute un espace en dessous de l'image */
+    max-width: 400px; /* Limite la largeur de l'image sur les grands écrans */
+}
+
+/* Efface le flottement après le bloc de contenu pour éviter les problèmes de mise en page */
+.content-block::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+    .content-image.right,
+    .content-image.left {
+        float: none; /* Désactive le flottement sur les petits écrans */
+        margin-left: auto; /* Centre l'image */
+        margin-right: auto; /* Centre l'image */
+        display: block; /* Assure que l'image prend sa propre ligne */
+        max-width: 100%; /* L'image prend toute la largeur disponible */
+    }
+}
